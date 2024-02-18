@@ -1,2 +1,0 @@
-# st
-personal st build
