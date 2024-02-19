@@ -1,3 +1,16 @@
+# st
+### personal build
+
+#### patches:
+	- st-anysize-20220718-baa9357.diff
+	- st-dracula-0.8.5.diff
+	- st-scrollback-0.8.5.diff
+	- st-scrollback-mouse-20220127-2c5edf2.diff
+	- st-scrollback-mouse-altscreen-20220127-2c5edf2.diff
+	- st-scrollback-mouse-increment-0.8.2.diff
+	- st-scrollback-reflow-0.8.5.diff
+	- st-w3m-0.8.3.diff
+
 st - simple terminal
 --------------------
 st is a simple terminal emulator for X which sucks less.
