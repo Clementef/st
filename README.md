@@ -1,6 +1,8 @@
 # st
 ### personal build
 
+![st demo](static/demo.png)
+
 #### patches:
 	- st-anysize-20220718-baa9357.diff
 	- st-dracula-0.8.5.diff
