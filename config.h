@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "FiraCode Nerd Font:size=12";
+static char *font = "Fira Code:size=12";
 static int borderpx = 10;
 
 /*
@@ -197,28 +197,29 @@ static MouseShortcut mshortcuts[] = {
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
-#define TERMMOD (ControlMask|ShiftMask)
+// #define MODKEY Mod1Mask
+#define CTRL ControlMask
+#define CTRLSHIFT (ControlMask|ShiftMask)
 
 const unsigned int keyboardscrollinc = 3;
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
-	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
+	{ CTRL,          	XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ ControlMask,          XK_equal,       zoom,           {.f = +1} },
-	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
-	{ ControlMask,          XK_0,           zoomreset,      {.f =  0} },
-	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
-	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
-	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
+	{ CTRL,          	XK_equal,       zoom,           {.f = +1} },
+	{ CTRL,          	XK_minus,       zoom,           {.f = -1} },
+	{ CTRL,          	XK_0,           zoomreset,      {.f =  0} },
+	{ CTRLSHIFT,		XK_C,           clipcopy,       {.i =  0} },
+	{ CTRLSHIFT,		XK_V,           clippaste,      {.i =  0} },
+	{ CTRLSHIFT,		XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
-	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ TERMMOD,              XK_K,           kscrollup,      {.i = -1} },
-	{ TERMMOD,              XK_J,           kscrolldown,    {.i = -1} },
-	{ ControlMask,          XK_k,           kscrollup,      {.i = keyboardscrollinc},		0, /* !alt */ -1 },
-	{ ControlMask,          XK_j,           kscrolldown,    {.i = keyboardscrollinc},		0, /* !alt */ -1 },
+	{ CTRLSHIFT,		XK_Num_Lock,    numlock,        {.i =  0} },
+	{ CTRLSHIFT,		XK_K,           kscrollup,      {.i = -1} },
+	{ CTRLSHIFT,		XK_J,           kscrolldown,    {.i = -1} },
+	{ CTRL,          	XK_k,           kscrollup,      {.i = keyboardscrollinc} },
+	{ CTRL,          	XK_j,           kscrolldown,    {.i = keyboardscrollinc} },
 };
 
 /*
